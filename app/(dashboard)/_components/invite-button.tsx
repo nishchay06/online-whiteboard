@@ -4,7 +4,6 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 
 export const InviteButton = () => {
-
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -13,7 +12,7 @@ export const InviteButton = () => {
           Invite Members
         </Button>
       </DialogTrigger>
-      <DialogContent className=" p-0 bg-transparent max-w-[880px] border-none">
+      <DialogContent className=' p-0 bg-transparent max-w-[880px] border-none'>
         <OrganizationProfile />
       </DialogContent>
     </Dialog>
