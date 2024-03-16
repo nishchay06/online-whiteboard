@@ -16,10 +16,12 @@ export const EmptyBoards = () => {
     mutate({
       orgId: organization.id,
       title: "Untitled",
-    }).then((id) => {
-      toast.success("Board created successfully")
-      // Redirect to the newly created board
-    }).catch(() => toast.error("Failed to create board"))
+    })
+      .then((id) => {
+        toast.success("Board created successfully")
+        // Redirect to the newly created board
+      })
+      .catch(() => toast.error("Failed to create board"))
   }
 
   return (
