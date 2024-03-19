@@ -27,6 +27,7 @@ import { Participants } from "./participants"
 import { Toolbar } from "./toolbar"
 import { CursorsPresence } from "./cursors-presence"
 import { LayerPreview } from "./layer-preview"
+import { SelectionBox } from "./selection-box"
 
 const MAX_LAYERS = 100 // Maximum number of layers
 
@@ -158,6 +159,8 @@ export const Canvas = ({ boardId }: CanvasProps) => {
     return layerIdsToColorSelection
   }, [selections])
 
+  const onResizeHandlePointerDown = () => {}
+
   return (
     <main className='h-full w-full relative bg-neutral-100 touch-none'>
       <Info boardId={boardId} />
@@ -190,6 +193,9 @@ export const Canvas = ({ boardId }: CanvasProps) => {
               selectionColor={layerIdsToColorSelection[layerId]}
             />
           ))}
+          <SelectionBox
+          onResizeHandlePointerDown={onResizeHandlePointerDown}
+          />
           <CursorsPresence />
         </g>
       </svg>
